@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-10 card">
+    <div class="row col-12 justify-content-end">
+      <button class="btn col-2 btn-danger mt-2" routerLink="/livros/new">new</button>
+    </div>
+    <table class="table bg-light border-danger text-center">
+      <thead>
+        <tr>
+          <th class="col-4.5" scope="col">Titulo</th>
+          <th class="col-4.5" scope="col">Autor</th>
+          <th class="col-3" scope="col">-</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (livro of livros; track $index){
+        <tr>
+          <td>{{ livro.titulo }}</td>
+          <td>{{ livro.autor }}</td>
+          <td>
+            <button class="btn btn-danger">Edit</button>
+            <button class="btn ms-2 btn-outline-danger" (click)="deleteById(livro)">delete</button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="col-1"></div>
+</div>

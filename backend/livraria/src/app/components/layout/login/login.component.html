@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-4"></div>
+  <div class="card col-4">
+    <div class="card-body">
+      <form>
+        <h5>Fazer login</h5>
+        <br />
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="text" name="username" class="form-control" [(ngModel)]="login.username" />
+          <label mdbLabel class="form-label" for="username">Username</label>
+        </mdb-form-control>
+        <mdb-form-control class="mb-4">
+          <input mdbInput type="password" name="password" class="form-control" [(ngModel)]="login.password" (keyup.enter)="logon()"/>
+          <label mdbLabel class="form-label" for="password">Password</label >
+        </mdb-form-control>
+
+        <div class="row mb-4">
+          <div class="col">
+            <a href="#!" class="text-danger">Register</a>
+          </div>
+      
+          <div class="col">
+            <a href="#!" class="text-danger">Forgot password</a>
+          </div>
+        </div>
+        <button mdbRipple type="button" (click)="logon()" class="btn btn-danger btn-block">
+          Sign in
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="col-4"></div>
+</div>
